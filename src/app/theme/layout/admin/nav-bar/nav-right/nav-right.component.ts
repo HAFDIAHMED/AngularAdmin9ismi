@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NgbDropdownConfig } from '@ng-bootstrap/ng-bootstrap';
 import { animate, style, transition, trigger } from '@angular/animations';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-nav-right',
@@ -33,7 +34,7 @@ export class NavRightComponent {
   chatMessage: boolean;
   friendId: boolean;
 
-  constructor(config: NgbDropdownConfig) {
+  constructor(config: NgbDropdownConfig,private router: Router) {
     config.placement = 'bottom-right';
     this.visibleUserList = false;
     this.chatMessage = false;
@@ -42,5 +43,9 @@ export class NavRightComponent {
   onChatToggle(friend_id) {
     this.friendId = friend_id;
     this.chatMessage = !this.chatMessage;
+  }
+  navigateToLogin() {
+    // Navigate to the login page and replace the current history entry
+    this.router.navigate(['/auth/signin'], { skipLocationChange: true });
   }
 }
