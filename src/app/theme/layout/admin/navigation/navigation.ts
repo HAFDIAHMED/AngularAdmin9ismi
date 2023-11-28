@@ -164,14 +164,14 @@ const NavigationItems = [
       //     },
       //   ],
       // },
-      {
-        id: 'sample-page',
-        title: 'Blank Page',
-        type: 'item',
-        url: '/auth/signin',
-        classes: 'nav-item',
-        icon: 'feather icon-sidebar',
-      },
+      // {
+      //   id: 'sample-page',
+      //   title: 'Blank Page',
+      //   type: 'item',
+      //   url: '/auth/signin',
+      //   classes: 'nav-item',
+      //   icon: 'feather icon-sidebar',
+      // },
       // {
       //   id: 'disabled-menu',
       //   title: 'Disabled Menu',
